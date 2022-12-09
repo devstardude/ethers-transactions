@@ -8,7 +8,7 @@ const GetBalance = ({ data, fetch }: GetBalance) => {
   return (
     <div className={styles.container}>
       <button onClick={fetch}>GET BALANCE</button>
-      <div className="w-full overflow-x-auto">
+      <div className={styles.tableContainer}>
         <table>
           <thead>
             <tr>

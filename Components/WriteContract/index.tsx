@@ -2,7 +2,7 @@ import BoxDiv from "../BoxDiv";
 import { useState } from "react";
 import { ethers } from "ethers";
 import erc20abi from "../../utils/ABI.json";
-
+import styles from './style.module.css'
 declare let window: any;
 
 interface WriteContract {
@@ -28,9 +28,7 @@ const WriteContract = ({ account, contract }: WriteContract) => {
   };
   return (
     <BoxDiv>
-      <h2 className="text-center text-[24px] font-bold pb-[1rem]">
-        Write to Contract
-      </h2>
+      <h2>Write to Contract</h2>
       <label>Enter Recipient address</label>
       <input
         name="contractAddress"
@@ -47,7 +45,7 @@ const WriteContract = ({ account, contract }: WriteContract) => {
           setAmount(e.target.value);
         }}
       />
-      <button onClick={handleTransfer} className="mt-4">
+      <button onClick={handleTransfer} className={styles.button}>
         Send
       </button>
     </BoxDiv>

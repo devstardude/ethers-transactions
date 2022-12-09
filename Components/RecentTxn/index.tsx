@@ -2,6 +2,8 @@ import { ethers } from "ethers";
 import erc20abi from "../../utils/ABI.json";
 import { useState, useEffect } from "react";
 import BoxDiv from "../BoxDiv";
+import styles from "./style.module.css";
+
 declare let window: any;
 interface RecentTxn {
   contract: string;
@@ -43,10 +45,8 @@ const RecentTxn = ({ contract }: RecentTxn) => {
   console.log(txs);
   return (
     <BoxDiv>
-      <h2 className="text-center text-[24px] font-bold pb-[1rem]">
-        Recent Transactions
-      </h2>
-      <div className="h-[30rem] flex flex-col gap-4 mt-[1rem] overflow-y-auto">
+      <h2>Recent Transactions</h2>
+      <div className={styles.tsxContainer}>
         {txs &&
           txs.length !== 0 &&
           txs.map((item: any) => (
@@ -59,9 +59,9 @@ const RecentTxn = ({ contract }: RecentTxn) => {
               </a>
             </BoxDiv>
           ))}
-          {txs &&
-          txs.length === 0 &&<p className="text-center">
-            Waiting for recent transations...</p>}
+        {txs && txs.length === 0 && (
+          <p className={styles.waiting}>Waiting for recent transations...</p>
+        )}
       </div>
     </BoxDiv>
   );

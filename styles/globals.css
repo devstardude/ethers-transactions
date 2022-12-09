@@ -52,3 +52,7 @@ td {
 a {
   @apply text-red-400 underline;
 }
+
+h2 {
+  @apply text-center text-[24px] font-bold pb-[1rem];
+}

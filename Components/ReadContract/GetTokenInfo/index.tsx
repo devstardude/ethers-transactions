@@ -8,7 +8,7 @@ const GetTokenInfo = ({ data, fetch }: GetTokenInfo) => {
   return (
     <div className={styles.container}>
       <button onClick={fetch}>GET TOKEN INFO</button>
-      <div className="w-full overflow-x-auto">
+      <div className={styles.tableContainer}>
         <table>
           <thead>
             <tr>

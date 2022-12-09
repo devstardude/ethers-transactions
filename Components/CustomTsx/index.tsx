@@ -3,6 +3,7 @@ import erc20abi from "../../utils/ABI.json";
 import { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import BoxDiv from "../BoxDiv";
+
 declare let window: any;
 interface CustomTsx {
   contract: string;
@@ -25,7 +26,7 @@ const CustomTsx = ({ contract }: CustomTsx) => {
 
   return (
     <BoxDiv>
-      <h2 className="text-center text-[24px] font-bold pb-[1rem]">
+      <h2 >
         Custom Transactions
       </h2>
       <label>Blocks subtracted from current block</label>
@@ -36,10 +37,10 @@ const CustomTsx = ({ contract }: CustomTsx) => {
           setStartBlock(parseInt(e.target.value));
         }}
       />
-      <button onClick={setTsxHandler} className="mt-[1rem]">
+      <button onClick={setTsxHandler} className={styles.button}>
         See emitted events
       </button>
-      <div className="h-[20rem] flex flex-col gap-4 mt-[1rem] overflow-y-auto">
+      <div className={styles.tsxContainer}>
         {txs &&
           txs.length !== 0 &&
           txs.map((item: any) => (

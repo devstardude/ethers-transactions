@@ -1,7 +1,7 @@
-import BoxDiv from "../BoxDiv";
 import ReadContract from "../ReadContract";
 import Wrapper from "../Wrapper";
 import WriteContract from "../WriteContract";
+import styles from "./style.module.css";
 import { useState } from "react";
 import RecentTxn from "../RecentTxn";
 import CustomTsx from "../CustomTsx";
@@ -13,14 +13,14 @@ const HomePage = ({ account }: HomePage) => {
   const [contract, setContract] = useState("");
   return (
     <Wrapper>
-      <div className=" w-full lg:w-[50%] flex flex-col gap-8">
+      <div className={styles.container}>
         <ReadContract
           contract={contract}
           setContract={(contract) => setContract(contract)}
         />
         <WriteContract contract={contract} account={account} />
       </div>
-      <div className="w-full lg:w-[50%] flex flex-col gap-8">
+      <div className={styles.container}>
         <RecentTxn contract={contract} />
         <CustomTsx contract={contract} />
       </div>

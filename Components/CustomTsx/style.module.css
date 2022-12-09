@@ -1,0 +1,6 @@
+.tsxContainer {
+  @apply h-[20rem] flex flex-col gap-4 mt-[1rem] overflow-y-auto;
+}
+.button {
+  @apply mt-[1rem];
+}

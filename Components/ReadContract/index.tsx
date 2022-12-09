@@ -57,7 +57,7 @@ const ReadContract = ({ contract, setContract }: ReadContract) => {
   };
   return (
     <BoxDiv>
-      <h2 className="text-center text-[24px] font-bold pb-[1rem]">
+      <h2 >
         Read from Contract
       </h2>
       <label>Enter contract address</label>
