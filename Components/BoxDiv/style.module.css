@@ -1,0 +1,6 @@
+.container {
+  @apply py-[1rem] px-[0.6rem] lg:px-[1rem];
+  @apply border border-[#9A53FF]/60 rounded-md;
+  @apply bg-[#9b53ff3d] transition-colors;
+  @apply w-full;
+}
