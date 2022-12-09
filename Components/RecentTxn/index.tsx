@@ -59,6 +59,9 @@ const RecentTxn = ({ contract }: RecentTxn) => {
               </a>
             </BoxDiv>
           ))}
+          {txs &&
+          txs.length === 0 &&<p className="text-center">
+            Waiting for recent transations...</p>}
       </div>
     </BoxDiv>
   );
